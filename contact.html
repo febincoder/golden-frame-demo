@@ -37,6 +37,7 @@
 
 		<!-- custom css include -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 		
 
 	</head>
@@ -299,40 +300,68 @@
 
 				<!-- contact-form - start -->
 				<div class="contact-form form-wrapper text-center">
-					<form action="https://jthemes.net/themes/html/harmony-event/contact.php" method="post">
-						<div class="row">
+					<form id="whatsappform" method="POST">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="form-item">
+                <input name="name" id="name" type="text" placeholder="Your Name" required>
+            </div>
+        </div>
 
-							<div class="col-lg-6 col-md-6 col-sm-12">
-								<div class="form-item">
-									<input type="text" placeholder="Your Name" required>
-								</div>
-							</div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="form-item">
+                <input name="email" id="email" type="email" placeholder="Email Address" required>
+            </div>
+        </div>
 
-							<div class="col-lg-6 col-md-6 col-sm-12">
-								<div class="form-item">
-									<input type="email" placeholder="Email Address" required>
-								</div>
-							</div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="form-item">
+                <input name="place" id="place" type="text" placeholder="Your Place" required>
+            </div>
+        </div>
 
-							<div class="col-lg-6 col-md-6 col-sm-12">
-								<div class="form-item">
-									<input type="text" placeholder="Your Country" required>
-								</div>
-							</div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="form-item">
+                <input name="number" id="number" type="tel" placeholder="Phone Number" required>
+            </div>
+        </div>
 
-							<div class="col-lg-6 col-md-6 col-sm-12">
-								<div class="form-item">
-									<input type="tel" placeholder="Phone Number" required>
-								</div>
-							</div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="custom-btn">Send</button>
+        </div>
+    </div>
+</form>
 
-							<div class="col-lg-12 col-md-12 col-sm-12">
-								<textarea placeholder="Your Message" required></textarea>
-								<button type="submit" class="custom-btn">send mail</button>
-							</div>
-							
-						</div>
-					</form>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#whatsappform").validate({
+            submitHandler: function(form) {
+                const $form = $("#whatsappform");
+                const phone = '8089976729';
+
+                var name = $('input[name=name]').val();
+                var email = $('input[name=email]').val();
+                var place = $('input[name=place]').val();
+                var number = $('input[name=number]').val();
+                var message = $('textarea[name=message]').val();
+                
+                const text = [
+                    'Name: ' + name,
+                    'Email: ' + email,
+                    'Place: ' + place,
+                    'Number: ' + number,
+                    'Message: ' + message
+                ].join("\n");
+
+                const action = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
+                window.open(action, '_blank');
+            }
+        });
+    });
+</script>
+
 				</div>
 				<!-- contact-form - end -->
 
@@ -480,7 +509,6 @@
 									<li><a href="#!">Services</a></li>
 									<li><a href="#!">Gallery</a></li>
 								</ul>
-								
 							</div>
 						</div>
 						<!-- usefullinks-wrapper - end -->
@@ -596,6 +624,9 @@
 
 		<!-- custom jquery include -->
 		<script src="assets/js/custom.js"></script>
+
+		<script src="assets/js/whatsapp.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 

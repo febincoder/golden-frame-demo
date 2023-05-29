@@ -36,7 +36,7 @@ body {
 
 ::-moz-selection {
   color: #ffbe30;
-  background: #333333; }
+  background: #000000; }
 
 ::selection {
   color: #ffbe30;
@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: capitalize; }
 
 p {
-  color: #fff5f5; }
+  color: #000000; }
 
 img {
   height: 100%;
@@ -1421,7 +1421,7 @@ button {
   display: none;
   position: fixed;
   padding: 15px 0px;
-  background-color: #333333; }
+  background-color: #000000; }
   .header-altranative .logo-area {
     max-width: 150px; }
     .header-altranative .logo-area a {
