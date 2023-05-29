@@ -68,7 +68,7 @@ p {
   color: #fff5f5; }
 
 img {
-  height: auto;
+  height: 100%;
   max-width: 100%; }
 
 .image-wrapper {
@@ -2128,6 +2128,7 @@ button {
 /* breadcrumb section - start
 ==================================================================================================== */
 .breadcrumb-section {
+  margin-top: -3rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
@@ -2352,6 +2353,9 @@ button {
 ==================================================================================================== */
 /* index - 1 main-carousel1 - start
 ==================================================================================================== */
+.slide-section{
+  margin-top: -2rem !important;
+}
 .slide-section .main-carousel1 .item {
   position: relative;
   background-size: cover;
