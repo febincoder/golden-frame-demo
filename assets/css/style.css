@@ -68,7 +68,7 @@ p {
   color: #000000; }
 
 img {
-  height: 100%;
+  height: auto;
   max-width: 100%; }
 
 .image-wrapper {
@@ -1426,7 +1426,6 @@ button {
     max-width: 150px; }
     .header-altranative .logo-area a {
       width: 100%;
-      height: 100%;
       display: block; }
   .header-altranative .alt-menu-btn {
     padding: 0px;
