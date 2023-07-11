@@ -8121,3 +8121,21 @@ button {
 #partners-clients-section{
   padding: 0px 0px 100px 0px;
 }
+.avatar-round {
+  border-radius: 50%;
+}
+
+.avatar-round {
+  border-radius: 50%;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.avatar-round:hover {
+  transform: scale(1.1);
+}
+.client-info{display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;}
+							
